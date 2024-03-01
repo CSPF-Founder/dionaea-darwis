@@ -75,4 +75,9 @@ RUN apt-get install python3-requests -y
 RUN chmod -R 777 /app/dt/data/ && \
     chmod -R 777 /processed_files/
 
+COPY ./threat_intel/ /app/dt/threat_intel/
+RUN chown -R appuser:appuser /app/dt/threat_intel/
+RUN mkdir /app/dt/threat_intel/config/
+RUN mkdir /app/dt/threat_intel/logs/
+
 CMD ["supervisord", "-c", "/etc/supervisor.conf"]

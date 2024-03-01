@@ -17,7 +17,6 @@ services:
       context: darwis_panel
     volumes:
       - ./darwis_panel/panel/:/app/dt/panel/
-      - ./darwis_panel/threat_intel/:/app/dt/threat_intel/
       - ./samples/:/app/dt/data/malware_samples/
     depends_on:
       - mariadb

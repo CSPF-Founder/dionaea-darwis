@@ -9,6 +9,8 @@ if [ ! -d "$samples_dir" ]; then
     mkdir -p "$samples_dir"
 fi
 
+chmod 777 -R $samples_dir
+
 generate_random_string() {
     characters="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
@@ -45,7 +47,7 @@ sed -i "s/EXAMPLE_DB_USER_TO_REPLACE/${mariadb_user}/g" ./darwis_panel/panel/con
 
 
 # Generate self-signed certificate
-# Set the common name for the certificate
+ Set the common name for the certificate
 SSL_COMMON_NAME="example.com"
 # Set the certificate validity period in days
 SSL_VALIDITY_DAYS=365
@@ -68,6 +70,12 @@ openssl x509 -in "${SSL_DIR}/server.crt" -noout -text
 
 # echo "Certificate and key files are generated in ${SSL_DIR} directory."
 
-docker compose up -d --build
+if docker compose version &> /dev/null ; then
+    docker compose up -d --build
+elif docker-compose version &> /dev/null ; then
+    docker-compose up -d --build
+else
+    echo "Error: Neither 'docker-compose' nor 'docker compose' is available."
+fi
 
 echo "Setup completed"
