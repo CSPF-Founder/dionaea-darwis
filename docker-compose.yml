@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  mariadb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: hp_db
+      MYSQL_USER: EXAMPLE_DB_USER_TO_REPLACE
+      MYSQL_PASSWORD: EXAMPLE_DB_PASS_TO_REPLACE
+    volumes:
+      - darwis-dionaea-db:/var/lib/mysql
+
+  frontend:
+    image: darwis-panel
+    build:
+      context: darwis_panel
+    volumes:
+      - ./darwis_panel/panel/:/app/dt/panel/
+      - ./darwis_panel/threat_intel/:/app/dt/threat_intel/
+      - ./samples/:/app/dt/data/malware_samples/
+    depends_on:
+      - mariadb
+      - dionaea
+    ports:
+      - 12443:443
+
+  dionaea:
+    image: dionaea-darwis
+    build:
+      context: dionaea
+    volumes:
+      - ./samples/:/opt/dionaea/var/lib/dionaea/binaries/
+    ports:
+      - 80:80
+      - 443:443
+      - 445:445
+      - 21:21
+
+volumes:
+  darwis-dionaea-db:

@@ -1,0 +1,16 @@
+{
+  "require": {
+    "ext-pdo": "*",
+    "monolog/monolog": "^3.2.0",
+    "vlucas/phpdotenv": "^5.5",
+    "mongodb/mongodb": "^1.15.0",
+    "guzzlehttp/guzzle": "^7.7",
+    "phpoffice/phpspreadsheet": "^1.29"
+  },
+  "autoload": {
+    "psr-4": {
+      "Core\\": "Core/",
+      "App\\": "App/"
+    }
+  }
+}
