@@ -1,0 +1,6 @@
+[MAIN]
+threat_intel_api_url = https://mad.cysecurity.co/ws4/api/v1
+threat_intel_api_key = {{API_KEY}}
+
+mad_data_dir = /app/dt/data/
+
