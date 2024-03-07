@@ -2,7 +2,7 @@
 
 Clone this repoistory
 ```bash
-git clone https://github.com/cspF-Founder/darwis-dionaea-panel
+git clone https://github.com/cspF-Founder/dionaea-darwis
 ```
 
 First time setup

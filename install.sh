@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git clone https://github.com/CSPF-Founder/dionaea-darwis ./dionaea
+git clone https://github.com/CSPF-Founder/dionaea-engine ./dionaea
 
 TARGET_DIR="."
 samples_dir="./samples"
