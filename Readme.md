@@ -7,7 +7,7 @@ git clone https://github.com/cspF-Founder/dionaea-darwis
 
 First time setup
 ```bash
-cd darwis-dionaea-panel 
+cd dionaea-darwis
 ./install.sh
 ```
 
