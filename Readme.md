@@ -55,3 +55,11 @@ https://localhost:12443
 ## Exposing Dionae
 
 Dionae will listen on these ports: 443,80,21,445. These should be exposed to the network on which you expect attack to happen. 
+
+
+
+## Contributors
+
+Sabari Selvan
+
+Suriya Prakash
