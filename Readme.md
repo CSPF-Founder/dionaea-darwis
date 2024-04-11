@@ -1,47 +1,41 @@
-# Setup
+# Dionaea-DARWIS Setup
 
-Clone this repoistory
+## Installing the Setup
+
+Download the repository via
 ```bash
-git clone https://github.com/cspF-Founder/dionaea-darwis
+git clone https://github.com/CSPF-Founder/dionaea-darwis.git
 ```
+Or to download it as a zip file, click on 'Code' in the top right corner and then select 'Download ZIP'.
 
-First time setup
+cd into the folder that is created.
+
+In the project folder run the below command.
 ```bash
-cd dionaea-darwis
 ./install.sh
 ```
 
-Once all 3 containers started, now go to browser and open
-```text
-https://localhost:12443
-```
+## Accessing the Panel
 
-It will take you to the setup page. Click "Setup" button, it will do base setup for the panel. If successful, then it will take to license activation page.
+Once all the 3 docker containers are up, the Honeypot panel is available on the URL: https://localhost:12443.
 
-## Obtain Free License Key
-You can obtain free Threat intel license key from CySecurity page.
+For information on how to use the panel, please refer to [Manual.md](Manual.md)
 
-(The Free license key will have limit of 1000 hash check and 100 file upload per day)
+## To stop the docker
 
-<https://cysecurity.co/panel/keys/request>
+To stop the honeypot containers, go to the project folder and run the below command
 
-
-## Activation
-Once you obtain the free license key, give the key in the activation page of the honeypot panel and proceed with further user creation
-
-## To Stop
-To stop the honeypot contains, type the following
 ```bash
 docker compose down
 ```
 
-## To start (in case if it is stopped)
-To restart the containers
+## To start/restart the docker (in case if it is stopped)
+
+To restart the containers, go to the project folder and run the below command
+
 ```bash
 docker compose up -d 
 ```
-
-
 
 ## Other info:
 
@@ -52,10 +46,9 @@ The management panel can be accessed via
 https://localhost:12443
 
 
-## Exposing Dionae
+## Exposing Dionaea
 
-Dionae will listen on these ports: 443,80,21,445. These should be exposed to the network on which you expect attack to happen. 
-
+Dionaea will listen on these ports: 443,80,21,445. These should be exposed to the network on which you expect the attack to happen.
 
 
 ## Contributors
