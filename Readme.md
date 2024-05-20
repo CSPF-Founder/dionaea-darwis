@@ -74,7 +74,7 @@ The management panel can be accessed via url: https://localhost:8443
 
 - If you want to start the VM after your computer restarts you can give `vargant up` on this folder or start from the virtualbox manager. 
 
-- Once up you can access the VM by giving the command `vagrant ssh apiprotectorvm`
+- Once up you can access the VM by giving the command `vagrant ssh dionaea-darwis`
 
 
 ## Exposing Dionaea
