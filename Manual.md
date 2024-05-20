@@ -19,21 +19,21 @@ You can obtain a free Threat Intel license key from the CySecurity page.
 
 <img src="./docimages/email-activation.png" alt="drawing" width="500"/>
 
-- Once you click on 'Activate your account', you can view the License key on the 'success page.'
+- Once you click on `Activate your account`, you can view the License key on the 'success page.'
 
 <img src="./docimages/license-key.png" alt="drawing" width="500"/>
 
-> **Note: Make sure to store & keep the License key safely. You can't recover it once lost. **
+> **Note: Each email address will receive one license key. Please store and keep your license key safely, as it cannot be recovered if lost. Once a license key has been used, it cannot be reused.**
 
 ## Accessing the Panel
 
-On your desktop, open a browser (Firefox or Chrome, recommended: Firefox) and enter the following address. https://localhost:12443
+On your desktop, open a browser (Firefox or Chrome, recommended: Firefox) and enter the following address. https://localhost:8443
 
-- You will get a self-signed certificate error message.  Click the 'Advanced' button and then click the 'Accept the Risk and Continue' button.
+- You will get a self-signed certificate error message.  Click the `Advanced` button and then click the `Accept the Risk and Continue` button.
 
 <img src="./docimages/accept-risk.png" alt="drawing" width="500"/>
 
-- This will take you to the setup page. Click the "Setup" button, which will perform the base setup for the panel. If successful, it will take you to the license activation page.
+- This will take you to the setup page. Click the `Setup` button, which will perform the base setup for the panel. If successful, it will take you to the license activation page.
 
 <img src="./docimages/setup.png" alt="drawing" width="500"/>
 
@@ -65,17 +65,17 @@ The Honeypot analyses the incidents with our threat intel and categorizes each i
 - Malicious: Known threat samples.
 - New Malware: Represents threats that have not been previously identified but are detected now.
 
-<img src="./docimages/home-page.png" alt="drawing" width="500"/>
+<img src="./docimages/home-page.png" alt="drawing" width="800" height="400"/>
 
-You can filter the statistics by choosing From date and To date, then click on the 'Refresh Chart' option to see details in different date ranges.
+You can filter the statistics by choosing From date and To date, then click on the `Refresh Chart` option to see details in different date ranges.
 
 ## Honeypot: View details/ View logs
 
-By clicking the 'View Details' button on the home page or clicking on 'View logs' in the side menu, you can see the honeypot logs including Incident ID, Incident Time, SHA256, and Verdict.
+By clicking the `View Details` button on the home page or clicking on `View logs` in the side menu, you can see the honeypot logs including Incident ID, Incident Time, SHA256, and Verdict.
 
 You can filter the logs by choosing the verdict from the Search by Verdict list menu, then click on Filter to show the entries.
 
-<img src="./docimages/view-logs.png" alt="drawing" width="500"/>
+<img src="./docimages/view-logs.png" alt="drawing" width="800" height="400"/>
 
 - You can copy the logs, and download the logs in CSV format and Excel format.
 - By clicking the icon under the Action menu, you can view the directory path where the malware sample is located.
@@ -90,11 +90,11 @@ You can view your profile information which includes name, username, and email a
 
 ## Logout
 
-You can click on the 'logout' option to successfully logout from the panel. 
+You can click on the `logout` option to successfully logout from the panel. 
 
 ## Forgot Password
 
-In case the password for the panel has been forgotten, you can click the 'Forgot Password' link on the login page to reset it.
+In case the password for the panel has been forgotten, you can click the `Forgot Password` link on the login page to reset it.
 
 <img src="./docimages/login.png" alt="drawing" width="500"/>
 

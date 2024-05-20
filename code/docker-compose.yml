@@ -10,6 +10,7 @@ services:
       MYSQL_PASSWORD: EXAMPLE_DB_PASS_TO_REPLACE
     volumes:
       - darwis-dionaea-db:/var/lib/mysql
+    restart: always
 
   frontend:
     image: darwis-panel
@@ -23,6 +24,7 @@ services:
       - dionaea
     ports:
       - 12443:443
+    restart: always
 
   dionaea:
     image: dionaea-darwis
@@ -35,6 +37,7 @@ services:
       - 443:443
       - 445:445
       - 21:21
+    restart: always
 
 volumes:
   darwis-dionaea-db:
