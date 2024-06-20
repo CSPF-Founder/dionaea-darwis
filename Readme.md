@@ -58,7 +58,7 @@ vagrant reload
 
 ## Accessing the Panel
 
-The Honeypot panel is available on the URL: https://localhost:8443.
+The Honeypot panel is available on the URL: https://localhost:12443.
 
 ```
 Note: If you want to change the port, you can change forwardport in the vagrantfile.
@@ -70,7 +70,7 @@ For information on how to use the panel, please refer to [Manual.md](Manual.md)
 
 The samples are shared between dionaea and the main code using the ./samples folder.
 
-The management panel can be accessed via url: https://localhost:8443
+The management panel can be accessed via url: https://localhost:12443
 
 - If you want to start the VM after your computer restarts you can give `vargant up` on this folder or start from the virtualbox manager. 
 

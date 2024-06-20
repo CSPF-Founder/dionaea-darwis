@@ -18,7 +18,7 @@ services:
       context: darwis_panel
     volumes:
       - ./darwis_panel/panel/:/app/dt/panel/
-      - ./samples/:/app/dt/data/malware_samples/
+      - ./volumes/var/lib/dionaea/binaries/:/app/dt/data/malware_samples/
     depends_on:
       - mariadb
       - dionaea
@@ -31,7 +31,7 @@ services:
     build:
       context: dionaea
     volumes:
-      - ./samples/:/opt/dionaea/var/lib/dionaea/binaries/
+      - ./volumes/var:/opt/dionaea/var/
     ports:
       - 80:80
       - 443:443

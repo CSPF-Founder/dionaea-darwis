@@ -27,7 +27,7 @@ You can obtain a free Threat Intel license key from the CySecurity page.
 
 ## Accessing the Panel
 
-On your desktop, open a browser (Firefox or Chrome, recommended: Firefox) and enter the following address. https://localhost:8443
+On your desktop, open a browser (Firefox or Chrome, recommended: Firefox) and enter the following address. https://localhost:12443
 
 - You will get a self-signed certificate error message.  Click the `Advanced` button and then click the `Accept the Risk and Continue` button.
 
