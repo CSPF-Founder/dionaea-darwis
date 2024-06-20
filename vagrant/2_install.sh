@@ -6,6 +6,9 @@ git clone https://github.com/CSPF-Founder/dionaea-engine ./dionaea
 TARGET_DIR="."
 samples_dir="./samples"
 
+mkdir -p /processed_files/
+chmod 777 -R /processed_files/
+
 if [ ! -d "$samples_dir" ]; then
     mkdir -p "$samples_dir"
 fi

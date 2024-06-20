@@ -42,7 +42,7 @@ class InfoApi(object):
             return
 
         tmp_hash_checked_path = config.config["TMP_HASH_CHECKED_DIR"] + file_name
-        final_file_path = config.config["PROCESSED_FILES_DIR"] + file_name
+        final_file_path = config.config["PROCESSED_FILES_DIR"] + file_hash_code
 
         # move the file
         shutil.move(file_path, tmp_hash_checked_path)

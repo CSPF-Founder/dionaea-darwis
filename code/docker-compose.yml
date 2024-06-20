@@ -19,6 +19,7 @@ services:
     volumes:
       - ./darwis_panel/panel/:/app/dt/panel/
       - ./volumes/var/lib/dionaea/binaries/:/app/dt/data/malware_samples/
+      - /processed_files/:/processed_files/
     depends_on:
       - mariadb
       - dionaea
