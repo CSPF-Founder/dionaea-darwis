@@ -61,13 +61,6 @@ use Core\View;
                                     </div>
 
                                     <p class=""></p>
-
-                                    <div>
-                                        <!-- Forgot password link -->
-                                        <a href="forgot-password" class="btn btn-link text-white px-0">
-                                            Forgot password?
-                                        </a>
-                                    </div>
                                     <div class="row">
                                         <div class="col-6">
                                             <?php if (Captcha::isCaptchaDisabled()) : ?>
