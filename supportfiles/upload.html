@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a File to Server</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="serverUrl">Server URL:</label>
+            <input type="text" id="serverUrl" name="serverUrl" required>
+
+            <label for="fileInput">Select a file:</label>
+            <input type="file" id="fileInput" name="fileInput" required>
+
+            <button type="button" onclick="uploadFile()">Upload</button>
+        </form>
+    </div>
+
+    <script>
+        function uploadFile() {
+            const serverUrl = document.getElementById('serverUrl').value;
+            const fileInput = document.getElementById('fileInput').files[0];
+
+            if (!serverUrl || !fileInput) {
+                alert('Please fill in all fields and select a file.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', fileInput);
+
+            fetch(serverUrl, {
+                method: 'POST',
+                body: formData
+            });
+        }
+    </script>
+</body>
+</html>
